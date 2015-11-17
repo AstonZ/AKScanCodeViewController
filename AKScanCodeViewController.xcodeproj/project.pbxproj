@@ -13,6 +13,10 @@
 		C6D5F9FA1BFABF80008BEAEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D5F9F81BFABF80008BEAEA /* Main.storyboard */; };
 		C6D5F9FC1BFABF80008BEAEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D5F9FB1BFABF80008BEAEA /* Assets.xcassets */; };
 		C6D5F9FF1BFABF80008BEAEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D5F9FD1BFABF80008BEAEA /* LaunchScreen.storyboard */; };
+		C6D5FA081BFAC033008BEAEA /* AKScanCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D5FA071BFAC033008BEAEA /* AKScanCodeViewController.m */; };
+		C6D5FA0A1BFAC4EF008BEAEA /* line_scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D5FA091BFAC4EF008BEAEA /* line_scan@2x.png */; };
+		C6D5FA0E1BFAC5BE008BEAEA /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D5FA0D1BFAC5BE008BEAEA /* UIView+AutoLayout.m */; };
+		C6D5FA101BFACD17008BEAEA /* pick_bg_scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6D5FA0F1BFACD17008BEAEA /* pick_bg_scan@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,12 @@
 		C6D5F9FB1BFABF80008BEAEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6D5F9FE1BFABF80008BEAEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6D5FA001BFABF80008BEAEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D5FA061BFAC033008BEAEA /* AKScanCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKScanCodeViewController.h; sourceTree = "<group>"; };
+		C6D5FA071BFAC033008BEAEA /* AKScanCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKScanCodeViewController.m; sourceTree = "<group>"; };
+		C6D5FA091BFAC4EF008BEAEA /* line_scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_scan@2x.png"; sourceTree = "<group>"; };
+		C6D5FA0C1BFAC5BE008BEAEA /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		C6D5FA0D1BFAC5BE008BEAEA /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		C6D5FA0F1BFACD17008BEAEA /* pick_bg_scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pick_bg_scan@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,11 @@
 				C6D5F9F31BFABF80008BEAEA /* AppDelegate.m */,
 				C6D5F9F51BFABF80008BEAEA /* ViewController.h */,
 				C6D5F9F61BFABF80008BEAEA /* ViewController.m */,
+				C6D5FA061BFAC033008BEAEA /* AKScanCodeViewController.h */,
+				C6D5FA071BFAC033008BEAEA /* AKScanCodeViewController.m */,
+				C6D5FA0B1BFAC5BE008BEAEA /* UIView+AutoLayout */,
+				C6D5FA091BFAC4EF008BEAEA /* line_scan@2x.png */,
+				C6D5FA0F1BFACD17008BEAEA /* pick_bg_scan@2x.png */,
 				C6D5F9F81BFABF80008BEAEA /* Main.storyboard */,
 				C6D5F9FB1BFABF80008BEAEA /* Assets.xcassets */,
 				C6D5F9FD1BFABF80008BEAEA /* LaunchScreen.storyboard */,
@@ -77,6 +92,15 @@
 				C6D5F9F01BFABF80008BEAEA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6D5FA0B1BFAC5BE008BEAEA /* UIView+AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C6D5FA0C1BFAC5BE008BEAEA /* UIView+AutoLayout.h */,
+				C6D5FA0D1BFAC5BE008BEAEA /* UIView+AutoLayout.m */,
+			);
+			path = "UIView+AutoLayout";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +134,7 @@
 				TargetAttributes = {
 					C6D5F9EB1BFABF80008BEAEA = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = YQR9LKEM67;
 					};
 				};
 			};
@@ -136,7 +161,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6D5FA101BFACD17008BEAEA /* pick_bg_scan@2x.png in Resources */,
 				C6D5F9FF1BFABF80008BEAEA /* LaunchScreen.storyboard in Resources */,
+				C6D5FA0A1BFAC4EF008BEAEA /* line_scan@2x.png in Resources */,
 				C6D5F9FC1BFABF80008BEAEA /* Assets.xcassets in Resources */,
 				C6D5F9FA1BFABF80008BEAEA /* Main.storyboard in Resources */,
 			);
@@ -149,6 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6D5FA0E1BFAC5BE008BEAEA /* UIView+AutoLayout.m in Sources */,
+				C6D5FA081BFAC033008BEAEA /* AKScanCodeViewController.m in Sources */,
 				C6D5F9F71BFABF80008BEAEA /* ViewController.m in Sources */,
 				C6D5F9F41BFABF80008BEAEA /* AppDelegate.m in Sources */,
 				C6D5F9F11BFABF80008BEAEA /* main.m in Sources */,
@@ -263,7 +292,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AKScanCodeViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Aston.AKScanCodeViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,7 +305,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AKScanCodeViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Aston.AKScanCodeViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";

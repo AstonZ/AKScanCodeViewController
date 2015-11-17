@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  AKScanCodeViewController
 //
-//  Created by 张良 on 15/11/17.
+//  Created by Aston on 15/11/17.
 //  Copyright © 2015年 Aston. All rights reserved.
 //
 
