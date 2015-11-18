@@ -29,7 +29,7 @@
 @property (nonatomic, retain) UIImageView * line;
 
 //test
-@property (nonatomic, weak) UIImageView *imageView;
+//@property (nonatomic, weak) UIImageView *imageView;
 
 @end
 
@@ -120,7 +120,6 @@
     UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 100, 300, 300)];
     imageView.image = [UIImage imageNamed:@"pick_bg_scan"];
     [self.view addSubview:imageView];
-    self.imageView = imageView;
 
 
     
@@ -254,10 +253,7 @@
     [_session startRunning];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    DebugLog(@"imageFrame %@", NSStringFromCGRect(self.imageView.frame));
-}
+
 
 #pragma mark -
 #pragma mark ---------SessionControl
