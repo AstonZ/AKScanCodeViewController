@@ -15,4 +15,5 @@ QRCode Scan 二维码扫描
  
  
  效果如下: 
+ 
   ![Alt Text](https://github.com/AstonZ/AKScanCodeViewController/blob/master/scanScreenCap.gif)
