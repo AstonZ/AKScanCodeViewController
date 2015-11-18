@@ -81,6 +81,30 @@
 - (void)setupUI
 {
     
+    //框框之外的黑色蒙版
+    UIColor *ccolor =[[UIColor blackColor] colorWithAlphaComponent:0.3];
+    
+    
+    //使用MaskLayer作为蒙版
+    UIView *blackView = [[UIView alloc] initWithFrame:self.view.bounds];
+    blackView.backgroundColor = ccolor;
+    blackView.userInteractionEnabled = NO;
+    [self.view addSubview:blackView];
+    
+    //ImageView Frame
+    CGRect imageFrame = CGRectMake( self.view.bounds.size.width/2.f - 300/2.f, self.view.center.y - 64/2.f - 300/2.f, 300.f, 300.f);
+    
+    CGRect innerFrame = CGRectInset(imageFrame, 12, 12);
+    
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    UIBezierPath *imageViewPath = [[UIBezierPath bezierPathWithRoundedRect:innerFrame cornerRadius:5] bezierPathByReversingPath];
+    [path appendPath:imageViewPath];
+    
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.path = path.CGPath;
+    blackView.layer.mask = maskLayer;
+    
     
     UILabel * labIntroudction= [[UILabel alloc] init];
     labIntroudction.backgroundColor = [UIColor clearColor];
@@ -97,9 +121,28 @@
     imageView.image = [UIImage imageNamed:@"pick_bg_scan"];
     [self.view addSubview:imageView];
     self.imageView = imageView;
-    //框框之外的黑色蒙版是4个view覆盖的
-    UIColor *ccolor =[[UIColor blackColor] colorWithAlphaComponent:0.3];
+
+
     
+    
+    
+    //扫描的横线
+    _line = [[UIImageView alloc] initWithFrame:CGRectMake(50, 110, 220, 2)];
+    _line.image = [UIImage imageNamed:@"line_scan.png"];
+    [self.view addSubview:_line];
+    
+    
+    
+    
+    [imageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
+    [imageView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:0];
+    [imageView autoSetDimension:ALDimensionHeight toSize:300.f];
+    [imageView autoSetDimension:ALDimensionWidth toSize:300.f];
+    
+    //四个View 做覆盖层的布局
+    /*
+     CGFloat dex = 12.f;
+
     UIView *coverTop = [[UIView alloc] init];
     coverTop.backgroundColor = ccolor;
     coverTop.userInteractionEnabled = NO;
@@ -119,22 +162,6 @@
     coverRight.backgroundColor = ccolor;
     coverRight.userInteractionEnabled = NO;
     [self.view addSubview:coverRight];
-    
-    
-    
-    //扫描的横线
-    _line = [[UIImageView alloc] initWithFrame:CGRectMake(50, 110, 220, 2)];
-    _line.image = [UIImage imageNamed:@"line_scan.png"];
-    [self.view addSubview:_line];
-    
-    
-    CGFloat dex = 12.f;
-    
-    
-    [imageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.view];
-    [imageView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:0];
-    [imageView autoSetDimension:ALDimensionHeight toSize:300.f];
-    [imageView autoSetDimension:ALDimensionWidth toSize:300.f];
     
     [coverTop autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view];
     [coverTop autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.view];
@@ -156,7 +183,7 @@
     [coverRight autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:-dex];
     [coverRight autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.view];
     [coverRight autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:imageView withOffset:-dex];
-    
+    */
     
     
     [labIntroudction autoAlignAxis:ALAxisVertical toSameAxisOfView:imageView];
